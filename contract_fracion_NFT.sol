@@ -253,9 +253,9 @@ contract FractionalNFT is ERC1155, Ownable {
      * @ only active owner with balance can register heir
        @ the account owner, when registering the account, must use the setApprovalForAll
        @ function to authorize the address that will receive the inheritance
-       @ 
+       @ param Address that will receive the inheritance
     */
-
+        
     function addrPatrimony(address _heritage) public popularAuthorized {
         require(
             _heritage != address(0),
@@ -264,6 +264,16 @@ contract FractionalNFT is ERC1155, Ownable {
         _patrimony[msg.sender] = _heritage;
         _account_patrimony[_heritage] = true; // update modifier for inheritance
     }
+    
+    /**
+     * @dev this transfer function can only be called by the wallet that is registered as an heir
+       @dev the wallet that will call the function needs to be registered in the addrPatrimony function and in the setApprovalForAll function (native of ERC-1155)
+     * @ only the wallet authorized to receive the inheritance can call the function
+       @ the account owner, when registering the account, must use the setApprovalForAll
+       @ param Asset owner address
+       @ param token id
+       @ param balance
+    */
 
     function transferPatrimony(
         address _owner,
