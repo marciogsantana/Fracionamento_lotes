@@ -17,9 +17,9 @@ Requisitos
 - O projeto deve ter testes unitários que garantam os cenários acima
 Bonus: De uma solução para herança, no caso de falecimento de um proprietário, como este imóvel poderia ser transferido para os herdeiros.
 
- De acordo com minhas pesquisas era possível fazer esta implementação usando dois contratos ERC721 e ERC20, entretanto achei confuso o rastreamento dos tokens por isso resolvi usar o ERC1155 já que é um protocolo mais moderno e já tem nativo a função de fracionar NFT.
+ De acordo com as minhas pesquisas, era possível fazer esta implementação usando dois contratos ERC721 e ERC20, entretanto, achei confuso o rastreamento dos tokens, por isso resolvi usar o ERC1155, já que é um protocolo mais moderno e já tem nativo a função de fracionar NFT.
 
- O objetivo foi montar o ecossistema ignorando por hora os metadado e conexão com front, por isso o contrato foi escrito usando Solidity e plataforma Remix por ser mais rápida e prática principalmente porque para testes, que neste caso foi necessário fazer a troca de carteiras constantemente, para os testes unitários foi usado Hardhat e JS, sobre os testes unitários faço uma ressalva que não consegui implementar todos em função do tempo.  
+ O objetivo foi montar o ecossistema, ignorando por hora os metadados e conexão com front. Por isso o contrato foi escrito usando Solidity e plataforma Remix, por ser mais rápida e prática, principalmente porque foi necessário a constante trocas de carteiras, para os testes unitários, foi usado Hardhat e JS. Sobre os testes unitários, faço uma ressalva, não foi possível implementar todos em função do tempo.  
 
 ### Diagrama UML do contrato
 ## todas as funcionalidades foram testadas e estão operacionais 
