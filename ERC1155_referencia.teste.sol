@@ -135,3 +135,5 @@ contract ERC1155GamingExplained is ERC1155, ERC1155Supply, Ownable {
         super._update(from, to, ids, values);
     }
 }
+
+// referencia: https://medium.com/@jeftar.carvalho.sales/criando-contrato-inteligente-gaming-com-erc1155-d48ffc79baca
